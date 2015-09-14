@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css">
 		<link rel="stylesheet" href="css/styles.css" type="text/css">
 		<script src="js/jquery-1.11.3.js"></script>
 		<script src="js/scripts.js"></script>
@@ -27,25 +27,28 @@
 							<label for="new-address">Address</label>
 							<input type="text" class="form-control" id="new-address">
 						</div>
-						<button type="submit" class="btn">Add</button>
-					</form>
 					
-					<div id="new-addresses">
-						<div class="new-address">
-							<div class="form-group">
-								<label for="new-street">Street</label>
-								<input type="text" class="form-control new-street">
-							</div>
-							<div class="form-group">
-								<label for="new-city">City</label>
-								<input type="text" class="form-control new-city">
-							</div>
-							<div class="form-group">
-								<label for="new-state">State</label>
-								<input type="text" class="form-control new-state">
+						<div id="new-addresses">
+							<div class="new-address">
+								<div class="form-group">
+									<label for="new-street">Street</label>
+									<input type="text" class="form-control new-street">
+								</div>
+								<div class="form-group">
+									<label for="new-city">City</label>
+									<input type="text" class="form-control new-city">
+								</div>
+								<div class="form-group">
+									<label for="new-state">State</label>
+									<input type="text" class="form-control new-state">
+								</div>
 							</div>
 						</div>
-					</div>
+						
+						<span class="btn btn-primary" id="add-address">Another address</span>
+						
+						<button type="submit" class="btn">Add</button>
+					</form>
 					
 					<h2>Contacts:</h2>
 					<ul id="contacts">
