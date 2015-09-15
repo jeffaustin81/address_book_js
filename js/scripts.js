@@ -8,6 +8,16 @@ Contact.prototype.fullName = function() {
 	return this.firstName + " " + this.lastName;
 }
 
+function Address(street, city, state) {
+	this.street = street;
+	this.city = city;
+	this.state = state;
+}
+
+Address.prototype.fullAddress = function() {
+	return this.street + ", " + this.city + ", " + this.state;
+}
+
 $(document).ready(function() {
 	$("#add-address").click(function() {
 		$("#new-addresses").append('<div class="new-address">' +
@@ -19,7 +29,7 @@ $(document).ready(function() {
 											'<label for="new-city">City</label>' +
 											'<input type="text" class="form-control new-city">' +
 										'</div>' +
-										'<div clas="form-group">' +
+										'<div class="form-group">' +
 											'<label for="new-state">State</label>' +
 											'<input type="text" class="form-control new-state">' +
 										'</div>' +
