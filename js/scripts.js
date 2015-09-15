@@ -24,25 +24,29 @@ function resetFields() {
 	$("input.new-street").val("");
 	$("input.new-city").val("");
 	$("input.new-state").val("");
+	$("div.new-address").not(":first").remove();
+}
+
+function newAddresses() {
+	$("#new-addresses").append('<div class="new-address">' +
+									'<div class="form-group">' +
+										'<label for="new-street">Street</label>' +
+										'<input type="text" class="form-control new-street">' +
+									'</div>' +
+									'<div class="form-group">' +
+										'<label for="new-city">City</label>' +
+										'<input type"text" class="form-control new-city">' +
+									'</div>' +
+									'<div class="form-group">' +
+										'<label for="new-state">State</label>' +
+										'<input type="text" class="form-control new-state">' +
+									'</div>' +
+								'</div>');
 }
 
 $(document).ready(function() {
 	$("#add-address").click(function() {
-		$("#new-addresses").append('<div class="new-address">' +
-										'<div class="form-group">' +
-											'<label for="new-street">Street</label>' +
-											'<input type="text" class="form-control new-street">' +
-										'</div>' +
-										'<div class="form-group">' +
-											'<label for="new-city">City</label>' +
-											'<input type="text" class="form-control new-city">' +
-										'</div>' +
-										'<div class="form-group">' +
-											'<label for="new-state">State</label>' +
-											'<input type="text" class="form-control new-state">' +
-										'</div>' +
-									'</div>');
-
+		newAddresses();
 	});
 
 	$("form#new-contact").submit(function(event) {
@@ -65,7 +69,7 @@ $(document).ready(function() {
 		$("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
 
 		$(".contact").last().click(function() {
-			$("#show-contact").toggle();
+			$("#show-contact").show();
 
 			$("#show-contact h2").text(newContact.fullName());
 			$(".first-name").text(newContact.firstName);
